@@ -23,7 +23,13 @@ const mutations = {
   },
   set (state, [variable, value]) {
     state[variable] = value
-  }
+  },
+  updateLocalStorage (state, { access, refresh }) {
+    localStorage.setItem('access_token', access)
+    localStorage.setItem('refresh_token', refresh)
+    state.accessToken = access
+    state.refreshToken = refresh
+  },
 }
 
 export default new Vuex.Store({
