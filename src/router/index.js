@@ -10,6 +10,8 @@ const Dashboard = () => import('@/views/Dashboard')
 const Colors = () => import('@/views/theme/Colors')
 const Typography = () => import('@/views/theme/Typography')
 
+const UsersManagement = () => import('@/views/users/UsersManagement')
+
 const Charts = () => import('@/views/charts/Charts')
 const Widgets = () => import('@/views/widgets/Widgets')
 
@@ -78,6 +80,21 @@ function configRoutes () {
           path: 'dashboard',
           name: 'Dashboard',
           component: Dashboard
+        },
+        {
+          path: 'management',
+          redirect: '/management/users',
+          name: 'Management',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'users',
+              name: 'UsersMng',
+              component: UsersManagement
+            }
+          ]
         },
         {
           path: 'theme',

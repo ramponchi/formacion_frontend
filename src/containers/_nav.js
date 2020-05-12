@@ -14,6 +14,16 @@ export default [
       },
       {
         _name: 'CSidebarNavTitle',
+        _children: ['Management']
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Users Management',
+        to: '/management/users',
+        icon: 'cil-user'
+      },
+      {
+        _name: 'CSidebarNavTitle',
         _children: ['Theme']
       },
       {
