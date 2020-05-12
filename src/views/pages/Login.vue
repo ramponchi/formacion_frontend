@@ -24,7 +24,6 @@
       </b-card>
     </b-col>
   </b-row>
-
 </template>
 
 <script>
@@ -58,4 +57,10 @@ export default {
   },
 }
 </script>
+<style>
+/* .form-control{
+  font-size: 58pt;
+} */
+</style>
+
 

@@ -8,7 +8,7 @@ import { iconsSet as icons } from './assets/icons/icons.js'
 import store from './store'
 
 Vue.config.performance = true
-// Vue.use(CoreuiVue)
+Vue.use(CoreuiVue)
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
